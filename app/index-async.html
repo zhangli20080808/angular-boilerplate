@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>异步加载库</title>
+	<script src="bower_components/script.js/dist/script.js"></script>
+</head>
+<body>
+	<!-- laod.js   script.js都可以帮助我们异步的方式加载js文件 -->
+
+<script type="text/javascript">
+	// $script('./bower_components/jquery/dist/jquery.js',function () {
+	// 	// body...
+	// 	console.log($);
+	// })
+	// 
+	// 
+	// 
+	$script(['./bower_components/jquery/dist/jquery.js','./bower_components/angular/angular.js'],function () {
+		// body...
+		 console.log(angular);
+		 console.log(jQuery);
+	})
+</script>
+</body>
+</html>
